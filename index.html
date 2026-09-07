@@ -1213,34 +1213,25 @@
             }
         }
 
-                // 2. Facebook Detection Logic (Disclaimer + 2-Sec Dialog)
-        var ua = navigator.userAgent || navigator.vendor || window.opera;
-        var isFB = (ua.indexOf("FBAN") > -1 || ua.indexOf("FBAV") > -1);
+                // 2. Facebook & Threads Detection Logic
+var ua = navigator.userAgent || navigator.vendor || window.opera;
+var isFB = (ua.indexOf("FBAN") > -1 || ua.indexOf("FBAV") > -1);
+var isThreads = (ua.indexOf("Barcelona") > -1 || ua.indexOf("Threads") > -1);
 
-        if (isFB) {
-            // (A) डिस्क्लेमर बॉक्स चालू रहेगा
-            var fbBox = document.getElementById("fb-guide");
-            if (fbBox) {
-                fbBox.style.display = "block";
-            }
+if (isFB || isThreads) {
+    // (A) डिस्क्लेमर बॉक्स चालू रहेगा
+    var fbBox = document.getElementById("fb-guide");
+    if (fbBox) {
+        fbBox.style.display = "block";
+    }
 
-            // (C) Intent डाउनलोड लिंक चालू रहेगा
-            var downloadBtn = document.getElementById("apk-download-btn");
-            if (downloadBtn) {
-                downloadBtn.href = "intent://github.com/balwan86/Bhairav-Nath/releases/download/V21/Bhairav_Nath_official_v21.9.1.apk#Intent;scheme=https;action=android.intent.action.VIEW;end;";
-                downloadBtn.removeAttribute("download");
-            }
-        }
-
-        // पॉपअप बंद करने का बटन फंक्शन
-        function closeFbModal() {
-            var modal = document.getElementById("fbGuideModal");
-            if (modal) {
-                modal.style.display = "none";
-            }
-        }
-
-
+    // (C) Intent डाउनलोड लिंक चालू रहेगा
+    var downloadBtn = document.getElementById("apk-download-btn");
+    if (downloadBtn) {
+        downloadBtn.href = "intent://github.com/balwan86/Bhairav-Nath/releases/download/V21/Bhairav_Nath_official_v21.9.1.apk#Intent;scheme=https;action=android.intent.action.VIEW;end;";
+        downloadBtn.removeAttribute("download");
+    }
+}
         // 3. Context Menu & Selection Protections
         window.addEventListener('contextmenu', function(e) {
             e.preventDefault();
