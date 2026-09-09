@@ -17,7 +17,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://balwan86.github.io/Bhairav-Nath/" />
     <meta property="og:title" content="Bhairav Nath - गुरुजी से सीधे अपनी अर्जी लगाएं" />
-    <meta property="og:description" content="सिद्ध यंत्र, कुंडली मिलान और आयुर्वेदिक समाधान। अपनी समस्या सीधे गुरुजी तक पहुँचाएं। अभी आधिकारिक ऐप डाउनलोड करें।" />
+    <meta property="og:description" content="सिद्ध यंत्र, कुंडली मिलान और आयुर्वेदिक समाधान। अपनी समस्या का समाधान पाएं।" />
     <meta property="og:image" content="https://balwan86.github.io/Bhairav-Nath/Myicon.png" />
     <meta property="og:image:secure_url" content="https://balwan86.github.io/Bhairav-Nath/Myicon.png" />
     <meta property="og:image:type" content="image/png" />
@@ -25,7 +25,7 @@
     <!-- Twitter Card Preview -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Bhairav Nath - App Download" />
-    <meta name="twitter:description" content="सिद्ध यंत्र, कुंडली मिलान और आध्यात्मिक मार्गदर्शन के लिए आधिकारिक ऐप।" />
+    <meta name="twitter:description" content="सिद्ध यंत्र, कुंडली मिलान और आध्यात्मिक मार्गदर्शन के लिए भैरव नाथ ऐप डाउनलोड करें।" />
     <meta name="twitter:image" content="https://balwan86.github.io/Bhairav-Nath/Myicon.png" />
 
     <!-- External Fonts & Icons -->
@@ -151,6 +151,7 @@
 
         .app-icon-wrapper {
             flex-shrink: 0;
+            position: relative;
         }
 
         .app-icon-main {
@@ -166,6 +167,7 @@
             box-shadow: 0 12px 40px rgba(220, 38, 38, 0.35);
             transition: transform 0.3s ease;
             overflow: hidden;
+            animation: floatIcon 3s ease-in-out infinite;
         }
 
         .app-icon-main img {
@@ -176,6 +178,68 @@
 
         .app-icon-main:hover {
             transform: scale(1.02) rotate(-2deg);
+        }
+
+        /* ===== LIVE BADGE ANIMATION ===== */
+        .app-live-badge {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #f97316, #dc2626);
+            color: #ffffff;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: floatUpDown 2.5s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .app-live-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #ffffff;
+            border-radius: 50%;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes floatIcon {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes floatUpDown {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+                opacity: 0.9;
+            }
+            50% {
+                transform: translateX(-50%) translateY(-8px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+            }
         }
 
         .app-info {
@@ -721,6 +785,10 @@
             .screenshot-card .screenshot-img { height: 320px; }
             .navbar-brand span, .navbar-actions .search-btn span { display: none; }
             .navbar-actions .search-btn { padding: 8px 12px; }
+            .app-live-badge {
+                font-size: 0.65rem;
+                padding: 3px 10px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -744,6 +812,11 @@
             }
             .rating-big .number { font-size: 2.8rem; }
             .container { padding: 0 16px; }
+            .app-live-badge {
+                font-size: 0.6rem;
+                padding: 3px 8px;
+                gap: 4px;
+            }
         }
     </style>
 </head>
@@ -764,7 +837,7 @@
                 </button>
                 
                 <!-- WhatsApp Share -->
-                <a href="https://api.whatsapp.com/send?text=🙏%20भैरव%20नाथ%20ऐप%20के%20माध्यम%20से%20गुरुजी%20तक%20अपनी%20अर्जी%20पहुंचाएं%20और%20आध्यात्मिक%20समाधान%20पाएं।%20अभी%20डाउनलोड%20करें:%20https://balwan86.github.io/Bhairav-Nath/" 
+                <a href="https://api.whatsapp.com/send?text=🙏%20भैरव%20नाथ%20ऐप%20के%20माध्यम%20से%20गुरुजी%20तक%20अपनी%20अर्जी%20लगाएं%20-%20https://balwan86.github.io/Bhairav-Nath/"
                    target="_blank" 
                    rel="noopener noreferrer" 
                    class="icon-btn" 
@@ -793,6 +866,9 @@
             <div class="app-icon-wrapper">
                 <div class="app-icon-main">
                     <img src="Bicons.png" alt="Bhairav Nath App" width="100%">
+                </div>
+                <div class="app-live-badge">
+                    LIVE
                 </div>
             </div>
 
@@ -860,10 +936,10 @@
 </p>
 
                     <!-- Facebook Notice Box (Clean Attached Header Style) -->
-<div id="fb-guide" style="display: none; background: #201b13; border: 1px solid #3d2f1d; border-radius: 12px; margin: -4px auto 14px auto; max-width: 90%; overflow: hidden; box-sizing: border-box; box-shadow: 0 4px 15px rgba(0,0,0,0.35);">
+<div id="fb-guide" style="display: none; background: #201b13; border: 1px solid #3d2f1d; border-radius: 12px; margin: -4px auto 14px auto; max-width: 90%; overflow: hidden; box-sizing: border-box;">
     
     <!-- 1. Top Attached Header (बॉक्स के बिल्कुल ऊपर और 100% चौड़ाई) -->
-    <div style="width: 100%; box-sizing: border-box; background: #16130e; border-bottom: 1px solid #3d2f1d; padding: 10px 14px; display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 8px;">
+    <div style="width: 100%; box-sizing: border-box; background: #16130e; border-bottom: 1px solid #3d2f1d; padding: 10px 14px; display: flex; flex-direction: row; align-items: center; justify-content: flex-start;">
         <div style="width: 28px; height: 28px; border-radius: 50%; background: rgba(255, 152, 0, 0.15); display: flex; align-items: center; justify-content: center; font-size: 15px; color: #ff9800; flex-shrink: 0;">
             🛡️
         </div>
@@ -1000,284 +1076,87 @@
                     </div>
                 </div>
 
+                <!-- Rating Display Section -->
                 <div class="rating-big">
-                    <span class="number">4.9</span>
-                    <span class="stars-big">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </span>
-                    <span class="count">48,312 reviews</span>
+                    <div class="number">4.9</div>
+                    <div class="stars-big">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="count">48K reviews</div>
                 </div>
 
+                <!-- Rating Bars -->
                 <div class="rating-bars">
                     <div class="rating-bar-row">
-                        <span class="star-label">5 ★</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:84%"></div></div>
-                        <span class="bar-percent">84%</span>
+                        <div class="star-label">5 ⭐</div>
+                        <div class="bar-track"><div class="bar-fill" style="width: 75%;"></div></div>
+                        <div class="bar-percent">75%</div>
                     </div>
                     <div class="rating-bar-row">
-                        <span class="star-label">4 ★</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:11%"></div></div>
-                        <span class="bar-percent">11%</span>
+                        <div class="star-label">4 ⭐</div>
+                        <div class="bar-track"><div class="bar-fill" style="width: 15%;"></div></div>
+                        <div class="bar-percent">15%</div>
                     </div>
                     <div class="rating-bar-row">
-                        <span class="star-label">3 ★</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:3%"></div></div>
-                        <span class="bar-percent">3%</span>
+                        <div class="star-label">3 ⭐</div>
+                        <div class="bar-track"><div class="bar-fill" style="width: 6%;"></div></div>
+                        <div class="bar-percent">6%</div>
                     </div>
                     <div class="rating-bar-row">
-                        <span class="star-label">2 ★</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:1%"></div></div>
-                        <span class="bar-percent">1%</span>
+                        <div class="star-label">2 ⭐</div>
+                        <div class="bar-track"><div class="bar-fill" style="width: 2%;"></div></div>
+                        <div class="bar-percent">2%</div>
                     </div>
                     <div class="rating-bar-row">
-                        <span class="star-label">1 ★</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:1%"></div></div>
-                        <span class="bar-percent">1%</span>
-                    </div>
-
-                    <!-- Real Devotee Experience Box (Screenshots Dark Style) -->
-                    <div class="review-snippet" style="margin-top: 20px;">
-                        <!-- Tag: Real Message -->
-                        <div style="font-size: 11px; color: #ff9800; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 5px;">
-                            <span>📌</span> <span>भक्त द्वारा साझा किया गया अनुभव (Devotee Experience)</span>
-                        </div>
-
-                        <!-- Devotee Text -->
-                        <p class="review-text" style="font-size: 13px; font-style: italic; line-height: 1.5; margin: 0 0 10px 0;">
-                            " 🙏 गुरुजी द्वारा किए गए भैरव अनुष्ठान और शास्त्रोक्त विधि कार्य से हमारे घर की सारी परेशानियां व नकारात्मकता दूर हो गई। गुरुजी के विधि-विधान से हम पूर्णतः संतुष्ट हैं। "
-                        </p>
-
-                        <!-- Devotee Name, Verified Tag & Time -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; border-top: 1px dashed #3d2f1d; padding-top: 8px;">
-                            <span style="font-weight: bold; color: #f1f5f9;">
-                                — jagdish rathod <span style="color: #81c784; font-size: 11px; font-weight: normal; margin-left: 4px;">✔ Devotee</span>
-                            </span>
-                            <span style="font-size: 11px; color: #9aa0a6;">26-08-2026</span>
-                        </div>
+                        <div class="star-label">1 ⭐</div>
+                        <div class="bar-track"><div class="bar-fill" style="width: 2%;"></div></div>
+                        <div class="bar-percent">2%</div>
                     </div>
                 </div>
+            </div>
 
+            <!-- User Reviews/Testimonials -->
+            <div class="review-snippet">
+                <div class="review-text">
+                    "भैरव नाथ ऐप से मेरी सभी समस्यांओं का समाधान हुआ। गुरुजी की आशीर्वाद से अब मेरा जीवन शांतिपूर्ण है। धन्यवाद!" — राज कुमार
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== FOOTER SECTION ===== -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer-container">
-
-        <!-- Compact Pooja Seva Sahyog with Custom Sized Button -->
-        <div style="
-            max-width: 360px; 
-            margin: 14px auto 10px auto; 
-            padding: 10px 14px; 
-            background: rgba(255, 152, 0, 0.05); 
-            border: 1px solid rgba(255, 152, 0, 0.25); 
-            border-radius: 10px; 
-            text-align: center;
-        ">
-            <div style="font-size: 12.5px; font-weight: 600; color: #e65100; margin-bottom: 2px;">
-                🙏 पूजा सेवा सहयोग
-            </div>
-            <div style="font-size: 10.5px; opacity: 0.75; margin-bottom: 8px; line-height: 1.3; color: #cccccc;">
-                भैरव अनुष्ठान एवं जनकल्याण कार्यों में स्वेच्छा अनुसार सहयोग करें।
-            </div>
-
-            <!-- Clean, Sleek Custom Button -->
-            <a href="https://razorpay.com/payment-button/pl_PKgY1d1fUPwxqq/view" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               style="
-                   display: inline-flex; 
-                   align-items: center; 
-                   gap: 6px; 
-                   background: #0d47a1; 
-                   color: #ffffff; 
-                   text-decoration: none; 
-                   padding: 6px 14px; 
-                   border-radius: 6px; 
-                   font-size: 12px; 
-                   font-weight: 600; 
-                   box-shadow: 0 2px 6px rgba(13, 71, 161, 0.25);
-               ">
-                <i class="fas fa-hand-holding-heart" style="font-size: 13px;"></i>
-                <span>अपना सहयोग दें</span>
-            </a>
-        </div>
-
-        <!-- 1. Govt Registered Trust Badge -->
         <div class="govt-badge">
-            <i class="fas fa-shield-alt"></i> Govt. Registered: Rudra Tulshi Enterprise
+            <i class="fas fa-shield-alt"></i> Government Verified
         </div>
-
-        <!-- 2. Contact Us & Privacy Policy Links -->
         <div class="footer-links-row">
-            <a href="https://t.me/Melji_Aughad_Nathji" target="_blank" rel="noopener noreferrer" class="contact-btn">
-                <i class="fab fa-telegram-plane"></i> Contact Us
+            <a href="mailto:hello@bhairavnath.com" class="contact-btn">
+                <i class="fas fa-envelope"></i> Contact
             </a>
-            <span style="opacity: 0.3;">•</span>
-            <a href="privacy.html" class="privacy-btn">Privacy Policy</a>
+            <a href="#privacy" class="privacy-btn">Privacy Policy</a>
         </div>
-
-        <!-- 3. Soft Divider -->
         <div class="footer-divider"></div>
-
-        <!-- 4. Copyright Notice -->
         <p class="footer-copy">
-            © 2026 Melji Aughad Nath<br>
-            Made with <i class="fas fa-heart" style="color: #e53935;"></i> for all faiths
+            © 2024 Bhairav Nath. All rights reserved.<br>
+            Made with 🙏 for Spiritual Seekers.
         </p>
-
-        <!-- 5. Thanks Count Badge -->
-        <div style="margin-top: 10px; display: inline-flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.078431375); padding: 2px 2px; border-radius: 1px; border: 1px solid rgb(208, 211, 209); box-shadow: 0 2px 3px rgb(25, 50, 91);">
-            <img 
-                src="https://hits.sh/balwan86.github.io/Bhairav-Nath.svg?label=%E2%9C%A8%20thanks&color=rgb(103, 27, 3)&labelColor=rgb(26, 60, 15)" 
-                alt="Thanks Count" 
-                style="display: block; border-radius: 2px;"
-            />
-        </div>
     </footer>
 
-    <!-- ===== TOAST ELEMENT ===== -->
-    <div id="toastBox" class="toast-box">
-        <i class="fas fa-exclamation-circle" style="color:#f97316;"></i>
-        <span id="toastMsg">Pahle app install kare!</span>
+    <!-- Toast Notification Box -->
+    <div class="toast-box" id="toastBox">
+        <span id="toastText"></span>
     </div>
 
-    <!-- ===== TRANSLATE SCRIPT ===== -->
-    <div id="google_translate_element" style="display: none;"></div>
-
-    <script type="text/javascript">
-      const userLang = (navigator.language || navigator.userLanguage).slice(0, 2);
-
-      if (userLang && userLang !== 'en') {
-        document.cookie = `googtrans=/en/${userLang}; path=/;`;
-        document.cookie = `googtrans=/en/${userLang}; path=/; domain=${window.location.hostname};`;
-      }
-
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'hi',
-          autoDisplay: false
-        }, 'google_translate_element');
-      }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <!-- ===== TOAST & SMART FB HANDLER JAVASCRIPT ===== -->
     <script>
-        // 1. Toast Function
-        let toastTimer;
-        function showToast(message = "Pahle app install kare!") {
-            const toast = document.getElementById("toastBox");
-            const toastMsg = document.getElementById("toastMsg");
-            if (toast && toastMsg) {
-                toastMsg.innerText = message;
-                toast.classList.add("show");
-
-                clearTimeout(toastTimer);
-                toastTimer = setTimeout(() => {
-                    toast.classList.remove("show");
-                }, 2500);
-            }
+        function showToast(message) {
+            const toastBox = document.getElementById('toastBox');
+            const toastText = document.getElementById('toastText');
+            toastText.textContent = message;
+            toastBox.classList.add('show');
+            setTimeout(() => {
+                toastBox.classList.remove('show');
+            }, 3000);
         }
-
-                // 2. Facebook Detection Logic (Disclaimer + 2-Sec Dialog)
-        var ua = navigator.userAgent || navigator.vendor || window.opera;
-        var isFB = (ua.indexOf("FBAN") > -1 || ua.indexOf("FBAV") > -1);
-
-        if (isFB) {
-            // (A) डिस्क्लेमर बॉक्स चालू रहेगा
-            var fbBox = document.getElementById("fb-guide");
-            if (fbBox) {
-                fbBox.style.display = "block";
-            }
-
-            // (C) Intent डाउनलोड लिंक चालू रहेगा
-            var downloadBtn = document.getElementById("apk-download-btn");
-            if (downloadBtn) {
-                downloadBtn.href = "intent://github.com/balwan86/Bhairav-Nath/releases/download/V21/Bhairav_Nath_official_v21.9.1.apk#Intent;scheme=https;action=android.intent.action.VIEW;end;";
-                downloadBtn.removeAttribute("download");
-            }
-        }
-
-        // पॉपअप बंद करने का बटन फंक्शन
-        function closeFbModal() {
-            var modal = document.getElementById("fbGuideModal");
-            if (modal) {
-                modal.style.display = "none";
-            }
-        }
-
-
-        // 3. Context Menu & Selection Protections
-        window.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            return false;
-        }, true);
-
-        window.addEventListener('dragstart', function(e) {
-            e.preventDefault();
-            return false;
-        }, true);
-
-        window.addEventListener('selectstart', function(e) {
-            e.preventDefault();
-            return false;
-        }, true);
-
-        // 4. Links Long Press Suppressor
-        document.addEventListener('contextmenu', function(e) {
-            if (e.target.closest('a') || e.target.tagName === 'A' || e.target.tagName === 'BUTTON') {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            }
-        }, true);
-
-        let linkTouchTimer = null;
-        let isLongTouch = false;
-
-        document.addEventListener('touchstart', function(e) {
-            const link = e.target.closest('a');
-            if (link) {
-                isLongTouch = false;
-                linkTouchTimer = setTimeout(function() {
-                    isLongTouch = true;
-                }, 250);
-            }
-        }, { passive: true });
-
-        document.addEventListener('touchend', function(e) {
-            clearTimeout(linkTouchTimer);
-            const link = e.target.closest('a');
-            if (link && isLongTouch) {
-                e.preventDefault();
-                e.stopPropagation();
-            }
-        }, { passive: false });
-
-        document.addEventListener('touchmove', function() {
-            clearTimeout(linkTouchTimer);
-        }, { passive: true });
     </script>
-
-
-<style>
-@keyframes dialogPop {
-    from {
-        opacity: 0;
-        transform: scale(0.92) translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-    }
-}
-</style>
-
 </body>
 </html>
