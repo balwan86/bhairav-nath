@@ -887,6 +887,32 @@
     }
 }
 
+        .fab-download {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #590803, #a44506);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: pulse 1.5s infinite;
+  z-index: 999;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 5px rgba(255,0,0,0.7); }
+  50% { transform: scale(1.1); box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); }
+  100% { transform: scale(1); box-shadow: 0 0 5px rgba(255,0,0,0.7); }
+}
+
     </style>
 </head>
 <body oncontextmenu="return false;">
@@ -1421,6 +1447,14 @@ if (isFB || isThreads) {
     }
 }
 </style>
+    <!-- Floating Action Button -->
+<a href="https://github.com/balwan86/Bhairav-Nath/releases/download/V21/Bhairav_Nath_official_v21.9.1.apk" 
+   class="fab-download" 
+   download>
+      <i class="fas fa-download"></i>
+</a>
+
+
 
 </body>
 </html>
