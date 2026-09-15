@@ -628,7 +628,7 @@
     display: inline-block;
     width: 7px;
     height: 7px;
-    background-color: hwb(0 12% 0%); /* Dot ka rang safed */
+    background-color: hwb(0 5% 0%); /* Dot ka rang safed */
     border-radius: 50%;
     /* Pulse animation to represent "live" status */
     animation: pulseDot 1.5s ease-in-out infinite;
@@ -663,8 +663,8 @@
 /* Responsive adjustment */
 @media (max-width: 480px) {
     .app-icon-main {
-        width: 110px;
-        height: 110px;
+        width: 140px;
+        height: 140px;
     }
     .live-text-badge {
         font-size: 9px;
@@ -826,7 +826,79 @@
     font-weight: 500;
 }
 
-      
+      /* ================= 📱💻 असली रिस्पॉन्सिव सिस्टम ================= */
+
+/* 1. मोबाइल स्क्रीन (767px तक) - बिल्कुल साफ़ मोबाइल लेआउट */
+@media (max-width: 767px) {
+    .app-hero .container {
+        max-width: 100%;
+        padding: 10px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .app-info {
+        text-align: center;
+    }
+    .app-sub, .app-rating-row {
+        justify-content: center;
+    }
+}
+
+/* 2. iPad, टैबलेट और PC (768px और ऊपर) - Play Store जैसा प्रीमियम डेस्कटॉप व्यू */
+@media (min-width: 768px) {
+    /* हीरो सेक्शन: लोगो Left में, डिटेल्स Right में और पूरा बॉक्स स्क्रीन के सेंटर में */
+    .app-hero .container {
+        max-width: 850px !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 28px !important;
+        padding: 30px 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    .app-icon-wrapper {
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    .app-info {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        flex-grow: 1 !important;
+    }
+
+    .app-title {
+        text-align: left !important;
+    }
+
+    .app-sub,
+    .app-rating-row {
+        justify-content: flex-start !important;
+    }
+
+    .app-desc {
+        text-align: left !important;
+        margin: 10px 0 !important;
+        max-width: 100% !important;
+    }
+
+    /* PC पर कार्ड्स भी मोबाइल की तरह चिपके नहीं रहेंगे, सुंदर 800px में खुलेंगे */
+    .master-arji-card,
+    .darbar-audio-wrapper,
+    .security-warning-box {
+        max-width: 800px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
 
     </style>
 </head>
@@ -1021,7 +1093,7 @@
         </button>
         <div class="audio-info">
             <b>दरबार संदेश व अर्जी विधान</b>
-            <span id="audioStatus">सुनने के लिए प्ले करें (30 सेकंड)</span>
+            <span id="audioStatus">सुनने के लिए प्ले करें (48 सेकंड)</span>
         </div>
         <div class="sound-wave" id="soundWave">
             <span></span><span></span><span></span><span></span>
@@ -1304,7 +1376,7 @@ document.getElementById('darbarAudio').addEventListener('ended', function() {
             </a>
         </div>
 
-        <!-- ================= ⚠️ आधिकारिक सुरक्षा चेतावनी ================= -->
+      <!-- ================= ⚠️ आधिकारिक सुरक्षा चेतावनी ================= -->
 <div class="security-warning-box">
     <div class="warning-header">
         <span class="warning-icon">⚠️</span>
