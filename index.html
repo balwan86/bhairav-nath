@@ -899,6 +899,49 @@
     }
 }
 
+        .pro-verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 9px;
+    border-radius: 20px;
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.35);
+    color: #22c55e;
+    font-size: 11.5px;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+/* हल्की सी लाइट (Shimmer) जो हर 3 सेकंड में गुज़रेगी */
+.pro-verified-badge::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        90deg, 
+        rgba(255, 255, 255, 0) 0%, 
+        rgba(255, 255, 255, 0.45) 50%, 
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: gentleShimmer 3.2s infinite ease-in-out;
+}
+
+@keyframes gentleShimmer {
+    0%, 65% {
+        left: -150%;
+    }
+    100% {
+        left: 200%;
+    }
+}
+
 
     </style>
 </head>
@@ -983,7 +1026,7 @@
         <span class="rating-num">4.9</span>
         <span class="rating-count">(आधिकारिक ऐप)</span>
         <span class="divider"></span>
-        <span style="color:#22c55e; font-weight:600; animation: glow 2s infinite;">
+        <span style="color:#22c55e; font-weight:600;" class="pro-verified-badge">
             <i class="fas fa-check-circle"></i> Verified
         </span>
     </div>
