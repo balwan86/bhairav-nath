@@ -369,221 +369,6 @@
             font-weight: 600;
         }
 
-
-        /* ===== SCREENSHOTS (RESPONSIVE & CENTERED) ===== */
-.screenshot-scroll {
-    display: flex;
-    gap: 18px;
-    overflow-x: auto;
-    padding: 12px 20px 24px;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    align-items: center;
-}
-
-/* PC / Laptop Screen (Jab screen 1200px ya badi ho) */
-@media (min-width: 1200px) {
-    .screenshot-scroll {
-        justify-content: center; /* PC par sare cards bilkul center me aayenge */
-        overflow-x: visible;     /* PC par scrollbar gayab ho jayega aur gallery view lagega */
-    }
-}
-
-.screenshot-scroll::-webkit-scrollbar {
-    height: 6px;
-}
-
-.screenshot-scroll::-webkit-scrollbar-track {
-    background: #1c1c1e;
-    border-radius: 10px;
-}
-
-.screenshot-scroll::-webkit-scrollbar-thumb {
-    background: #333338;
-    border-radius: 10px;
-}
-
-.screenshot-card {
-    flex: 0 0 220px;
-    scroll-snap-align: start;
-    border-radius: 20px;
-    overflow: hidden;
-    background: #1c1c1e;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-    transition: 0.3s;
-    border: 1px solid #2c2c2e;
-}
-
-.screenshot-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
-}
-
-.screenshot-card .screenshot-img {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.screenshot-card .screenshot-label {
-    padding: 10px 14px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: #9aa0a6;
-    text-align: center;
-    background: #1c1c1e;
-    border-top: 1px solid #2c2c2e;
-}
-
-
-        .screenshot-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
-        }
-
-        .screenshot-card .screenshot-img {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .screenshot-card .screenshot-label {
-            padding: 10px 14px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #9aa0a6;
-            text-align: center;
-            background: #1c1c1e;
-            border-top: 1px solid #2c2c2e;
-        }
-
-        /* ===== RATING & REVIEWS (DARK) ===== */
-        .rating-section {
-            padding: 40px 0 56px;
-            background: #121212;
-            animation: fadeUp 0.6s ease;
-            animation-delay: 0.12s;
-            animation-fill-mode: both;
-        }
-
-        .review-title-box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin: 15px 0 15px;
-        }
-
-        .review-title-box h2 {
-            font-size: 18px;
-            font-weight: 700;
-            margin: 0;
-            color: #f1f3f4;
-        }
-
-        /* Main Dark Rating Card matching Screenshot */
-        .rating-card {
-            background: #1c1c1e;
-            border-radius: 28px;
-            padding: 32px 36px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
-            border: 1px solid #2c2c2e;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .rating-big {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-width: 120px;
-        }
-
-        .rating-big .number {
-            font-size: 3.6rem;
-            font-weight: 800;
-            color: #f1f5f9;
-            line-height: 1;
-        }
-
-        .rating-big .stars-big {
-            color: #fbbf24;
-            font-size: 1.3rem;
-            letter-spacing: 3px;
-            margin: 6px 0 2px;
-        }
-
-        .rating-big .count {
-            font-size: 0.9rem;
-            color: #9aa0a6;
-        }
-
-        .rating-bars {
-            flex: 1;
-            min-width: 200px;
-        }
-
-        .rating-bar-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 6px;
-        }
-
-        .rating-bar-row .star-label {
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: #9aa0a6;
-            width: 32px;
-        }
-
-        .rating-bar-row .bar-track {
-            flex: 1;
-            height: 6px;
-            background: #2c2c2e;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .rating-bar-row .bar-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #f97316, #dc2626);
-            border-radius: 10px;
-        }
-
-        .rating-bar-row .bar-percent {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: #9aa0a6;
-            width: 36px;
-            text-align: right;
-        }
-
-        /* Real Devotee Experience Box (Matching Screenshot Dark Theme) */
-        .review-snippet {
-            background: #201b13 !important;
-            border: 1px solid #3d2f1d !important;
-            border-left: 4px solid #ff9800 !important;
-            padding: 14px;
-            border-radius: 10px;
-            margin-top: 18px;
-            text-align: left;
-        }
-
-        .review-snippet .review-text {
-            font-size: 0.95rem;
-            color: #d1d1d1 !important;
-            font-style: italic;
-        }
-
         /* ===== FOOTER DUAL/DARK SUPPORT ===== */
         .footer-container {
             text-align: center;
@@ -932,6 +717,117 @@
   100% { text-shadow: 0 0 5px #f2f2ee; }
 }
 
+.master-card-section {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.master-arji-card {
+    /* कार्ड को बीच में लाने और सही चौड़ाई देने के लिए ये 2 लाइनें सबसे ज़रूरी हैं */
+    max-width: 460px;
+    margin: 0 auto;
+
+    background: linear-gradient(180deg, #221a16 0%, #141414 100%);
+    border: 1.5px solid rgba(255, 112, 67, 0.4);
+    border-radius: 18px;
+    padding: 22px 18px;
+    box-shadow: 0 0 20px rgba(255, 112, 67, 0.15), inset 0 0 10px rgba(255, 112, 67, 0.08);
+    box-sizing: border-box;
+}
+
+
+.card-top {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.darbar-badge {
+    background: rgba(255, 112, 67, 0.15);
+    color: #ff7043;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    border: 1px solid rgba(255, 112, 67, 0.3);
+}
+
+.card-top h3 {
+    margin: 10px 0 6px;
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.card-top p {
+    margin: 0;
+    color: #a0a0a0;
+    font-size: 12px;
+}
+
+/* लिस्ट की स्टाइलिंग */
+.arji-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.arji-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.arji-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.list-bullet {
+    color: #ff7043;
+    font-size: 15px;
+    margin-top: 1px;
+    flex-shrink: 0;
+}
+
+.list-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.list-text b {
+    color: #c87802;
+    font-size: 13.5px;
+    font-weight: 600;
+}
+
+.list-text span {
+    color: #d1d1d1;
+    font-size: 11.5px;
+    line-height: 1.4;
+}
+
+/* फुटर नोट */
+.card-footer-note {
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px dashed rgba(255, 112, 67, 0.25);
+    text-align: center;
+    color: #8bc34a;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+      
+
     </style>
 </head>
 <body oncontextmenu="return false;">
@@ -991,40 +887,40 @@
 
 
 
-            <div class="app-info">
-                <h1 class="app-title">
-                    <span>Bhairav</span> Darbar
-                </h1>
-                <div class="app-sub" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; font-size: 13px; color: #a4b0be; margin-top: 4px;">
-    <span>Your Request • Directly to Guruji</span>
-    <span class="badge" style="vertical-align: middle;">✦ All Religions</span>
-    <span>• 2M+ Requests</span>
+                <div class="app-info">
+    <h1 class="app-title">
+        <span>Bhairav</span> Darbar
+    </h1>
+    
+    <!-- सब-टाइटल: बिना किसी फ़र्ज़ी 2M+ आँकड़े के, गंभीर और मर्यादित -->
+    <div class="app-sub" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; font-size: 13px; color: #a4b0be; margin-top: 4px;">
+        <span>सीधा दरबार संकल्प</span>
+        <span class="badge" style="vertical-align: middle;">✦ सर्व समाज कल्याण</span>
+        <span>• पूर्णतः गोपनीय</span>
+    </div>
+
+    <!-- रेटिंग रो: 48K reviews हटाकर आधिकारिक ऐप का टैग -->
+    <div class="app-rating-row">
+        <span class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+        </span>
+        <span class="rating-num">4.9</span>
+        <span class="rating-count">(आधिकारिक ऐप)</span>
+        <span class="divider"></span>
+        <span style="color:#22c55e; font-weight:600; animation: glow 2s infinite;">
+            <i class="fas fa-check-circle"></i> Verified
+        </span>
+    </div>
+
+    <!-- विवरण: शुद्ध, आदरणीय और हर वर्ग को जोड़ने वाला विवरण -->
+    <p class="app-desc">
+        <strong>श्री भैरव नाथ दरबार</strong> — घर बैठे अपनी विशेष अर्जी व मनोकामना सीधे दरबार तक पहुँचाएँ। यह मंच <span class="highlight-tag">सर्व समाज व हर आस्था</span> के कल्याण हेतु खुला है। व्यापारिक रुकावट, पारिवारिक कलह, नज़र-दोष व मानसिक शांति हेतु <strong>सिद्ध रक्षा कवच</strong>, <strong>कुंडली परामर्श</strong> एवं <strong>पारंपरिक मार्गदर्शन</strong> प्राप्त करें।
+    </p>
 </div>
-
-
-                <div class="app-rating-row">
-                    <span class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </span>
-                    <span class="rating-num">4.9</span>
-                    <span class="rating-count">(48K reviews)</span>
-                    <span class="divider"></span>
-                    <span style="color:#22c55e; font-weight:600; animation: glow 2s infinite;">
-                        <i class="fas fa-check-circle"></i> Verified
-                    </span>
-                </div>
-
-                <p class="app-desc">
-                    <strong>Bhairav Darbar</strong> — Connect directly with Guruji for your
-                    spiritual needs. Open to all faiths — <span class="highlight-tag">Hindu • Muslim • Sikh • Christian • Parsi</span>
-                    and all religions. Submit your problems, wishes, and receive divine guidance
-                    through <strong>Siddha Yantra</strong>, <strong>Kundli Matching</strong>, and
-                    <strong>Ayurvedic Herbal</strong> remedies.
-                </p>
 
                 <!-- Buttons Container -->
                 <div class="app-actions" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; position: relative;">
@@ -1117,150 +1013,103 @@
         </div>
     </section>
 
-    <!-- ===== SCREENSHOTS ===== -->
-    <section class="screenshots">
-        <div class="screenshot-scroll">
-            <!-- Screenshot 1 -->
-            <div class="screenshot-card">
-                <div class="screenshot-img">
-                    <img src="Hi.jpg" alt="Hindi" style="width:100%; height:100%; object-fit:cover; display:block;">
-                </div>
-                <div class="screenshot-label">🕉️ Hindi</div>
-            </div>
-
-            <!-- Screenshot 2 -->
-            <div class="screenshot-card">
-                <div class="screenshot-img">
-                    <img src="En.jpg" alt="English" style="width:100%; height:100%; object-fit:cover; display:block;">
-                </div>
-                <div class="screenshot-label">💞 English</div>
-            </div>
-
-            <!-- Screenshot 3 -->
-            <div class="screenshot-card">
-                <div class="screenshot-img">
-                    <img src="Ur.jpg" alt="Urdu" style="width:100%; height:100%; object-fit:cover; display:block;">
-                </div>
-                <div class="screenshot-label">🌿 Urdu</div>
-            </div>
-
-            <!-- Screenshot 4 -->
-            <div class="screenshot-card">
-                <div class="screenshot-img">
-                    <img src="Bn.jpg" alt="Bangladeshi" style="width:100%; height:100%; object-fit:cover; display:block;">
-                </div>
-                <div class="screenshot-label">✍️ Bangladeshi</div>
-            </div>
-
-            <!-- Screenshot 5 -->
-            <div class="screenshot-card">
-                <div class="screenshot-img">
-                    <img src="Ru.jpg" alt="Russian" style="width:100%; height:100%; object-fit:cover; display:block;">
-                </div>
-                <div class="screenshot-label">🔔 Russian</div>
-            </div>
+    <!-- ===== SINGLE MASTER ARJI CARD ===== -->
+<section class="master-card-section">
+    <div class="master-arji-card">
+        
+        <!-- कार्ड हेडर -->
+        <div class="card-top">
+            <span class="darbar-badge">🔱 अधिकृत दरबार सेवा 🔱</span>
+            <h3>दरबार विशेष अर्जी संकल्प</h3>
+            <p>आप निम्न सभी समस्याओं व प्रयोजनों हेतु सीधे अर्जी लगा सकते हैं</p>
         </div>
-    </section>
 
-    <!-- ===== RATING & REVIEWS ===== -->
-    <section class="rating-section">
-        <div class="container">
-            <div class="review-title-box">
-                <i class="fas fa-star" style="color: #f97316; font-size: 18px;"></i>
-                <h2>Ratings & Reviews</h2>
-            </div>
-
-            <div class="rating-card">
-                <!-- Clickable "Rate this app" Section -->
-                <div style="width: 100%; text-align: center; padding-bottom: 18px; margin-bottom: 22px; border-bottom: 1px solid #2c2c2e;">
-                    <div style="font-size: 14px; color: #f1f5f9; font-weight: 500; margin-bottom: 4px;">
-                        Rate this app
-                    </div>
-                    <div style="font-size: 12px; color: #9aa0a6; margin-bottom: 10px;">
-                        अपनी रेटिंग और राय साझा करें
-                    </div>
-                    
-                    <!-- 5 Clickable Stars -->
-                    <div style="font-size: 32px; color: #5f6368; display: flex; justify-content: center; gap: 14px; cursor: pointer; user-select: none; line-height: 1;">
-                        <span onclick="showToast('रेटिंग देने के लिए पहले ऐप इंस्टॉल करें!')">☆</span>
-                        <span onclick="showToast('रेटिंग देने के लिए पहले ऐप इंस्टॉल करें!')">☆</span>
-                        <span onclick="showToast('रेटिंग देने के लिए पहले ऐप इंस्टॉल करें!')">☆</span>
-                        <span onclick="showToast('रेटिंग देने के लिए पहले ऐप इंस्टॉल करें!')">☆</span>
-                        <span onclick="showToast('रेटिंग देने के लिए पहले ऐप इंस्टॉल करें!')">☆</span>
-                    </div>
-
-                    <!-- Write a review Button -->
-                    <div style="margin-top: 12px;">
-                        <span onclick="showToast('रिव्यू लिखने के लिए पहले ऐप इंस्टॉल करें!')" style="font-size: 13px; color: #00a86b; font-weight: 600; cursor: pointer;">
-                            Write a review / रिव्यू लिखें
-                        </span>
-                    </div>
+        <!-- लाइन-बाय-लाइन समस्याओं की सूची -->
+        <ul class="arji-list">
+            <li>
+                <div class="list-bullet">✦</div>
+                <div class="list-text">
+                    <b>व्यापार व आजीविका रुकावट:</b>
+                    <span>मेहनत के बाद भी लगातार घाटा, रुका हुआ धन या कार्य में अंतिम समय पर बाधा शांति।</span>
                 </div>
+            </li>
 
-                <div class="rating-big">
-                    <span class="number">4.9</span>
-                    <span class="stars-big">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </span>
-                    <span class="count">48,312 reviews</span>
+                      <li>
+                <div class="list-bullet">✦</div>
+                <div class="list-text">
+                    <b>रिश्तों में अनबन व दूरियां (आपसी प्रेम वृद्धि):</b>
+                    <span>जीवनसाथी या प्रियजन द्वारा बात न सुनना, अकारण खिंचाव व बढ़ती दूरियां मिटाकर मन में पुनः प्रेम व आकर्षण भाव जाग्रत करने हेतु अर्जी संकल्प।</span>
                 </div>
+            </li>
 
-                <div class="rating-bars">
-                    <div class="rating-bar-row">
-                        <span class="star-label">5 ★</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:84%"></div></div>
-                        <span class="bar-percent">84%</span>
-                    </div>
-                    <div class="rating-bar-row">
-                        <span class="star-label">4 ★</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:11%"></div></div>
-                        <span class="bar-percent">11%</span>
-                    </div>
-                    <div class="rating-bar-row">
-                        <span class="star-label">3 ★</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:3%"></div></div>
-                        <span class="bar-percent">3%</span>
-                    </div>
-                    <div class="rating-bar-row">
-                        <span class="star-label">2 ★</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:1%"></div></div>
-                        <span class="bar-percent">1%</span>
-                    </div>
-                    <div class="rating-bar-row">
-                        <span class="star-label">1 ★</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:1%"></div></div>
-                        <span class="bar-percent">1%</span>
-                    </div>
 
-                    <!-- Real Devotee Experience Box (Screenshots Dark Style) -->
-                    <div class="review-snippet" style="margin-top: 20px;">
-                        <!-- Tag: Real Message -->
-                        <div style="font-size: 11px; color: #ff9800; font-weight: bold; margin-bottom: 8px; display: flex; align-items: center; gap: 5px;">
-                            <span>📌</span> <span>भक्त द्वारा साझा किया गया अनुभव (Devotee Experience)</span>
-                        </div>
-
-                        <!-- Devotee Text -->
-                        <p class="review-text" style="font-size: 13px; font-style: italic; line-height: 1.5; margin: 0 0 10px 0;">
-                            " 🙏 गुरुजी द्वारा किए गए भैरव अनुष्ठान और शास्त्रोक्त विधि कार्य से हमारे घर की सारी परेशानियां व नकारात्मकता दूर हो गई। गुरुजी के विधि-विधान से हम पूर्णतः संतुष्ट हैं। "
-                        </p>
-
-                        <!-- Devotee Name, Verified Tag & Time -->
-                        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 12px; border-top: 1px dashed #3d2f1d; padding-top: 8px;">
-                            <span style="font-weight: bold; color: #f1f5f9;">
-                                — jagdish rathod <span style="color: #81c784; font-size: 11px; font-weight: normal; margin-left: 4px;">✔ Devotee</span>
-                            </span>
-                            <span style="font-size: 11px; color: #9aa0a6;">26-08-2026</span>
-                        </div>
-                    </div>
+            <li>
+                <div class="list-bullet">✦</div>
+                <div class="list-text">
+                    <b>पारिवारिक कलह व भारीपन:</b>
+                    <span>घर में अकारण अशांति, कलह, भारीपन व नकारात्मक ऊर्जा का शास्त्रोक्त निवारण।</span>
                 </div>
+            </li>
 
-            </div>
+            <li>
+                <div class="list-bullet">✦</div>
+                <div class="list-text">
+                    <b>विवाह व संबंध अड़चन:</b>
+                    <span>रिश्तों में अचानक रुकावट आना, कुंडली ग्रह-दोष शांति व सटीक गुण मिलान।</span>
+                </div>
+            </li>
+
+            <li>
+                <div class="list-bullet">✦</div>
+                <div class="list-text">
+                    <b>अकारण भय व मानसिक तनाव:</b>
+                    <span>रात में बेचैनी, अकारण घबराहट व आभामंडल (Aura) शुद्धि हेतु बटुक भैरव स्मरण।</span>
+                </div>
+            </li>
+
+            <li>
+                <div class="list-bullet">✦</div>
+                <div class="list-text">
+                    <b>विशेष कार्य सिद्धि संकल्प:</b>
+                    <span>नए कार्य, परीक्षा, पदोन्नति या किसी भी मनोकामना पूर्ति हेतु शुभ संकल्प।</span>
+                </div>
+            </li>
+
+            <li>
+                <div class="list-bullet">✦</div>
+                <div class="list-text">
+                    <b>सिद्ध रक्षा कवच व वनौषधि:</b>
+                    <span>पारंपरिक ऊर्जा संतुलन, अभय सुरक्षा व दिव्य जड़ी-बूटी परामर्श।</span>
+                </div>
+            
+                  <li>
+                <div class="list-bullet">✦</div>
+                <div class="list-text">
+                    <b>सर्व समाज व आस्था सम्मान (कल्याण अर्जी):</b>
+                    <span>मजहब या पंथ का कोई भेद नहीं, कारोबार में बरकत, बुरी नज़र (नज़र-ए-बद) शांति व रूहानी सुकून हेतु हर कोई अर्जी लगा सकता है।</span>
+                </div>
+            </li>
+
+                  <li>
+                <div class="list-bullet">✦</div>
+                <div class="list-text">
+                    <b>भैरव साधना दीक्षा व विशेष विधान:</b>
+                    <span>मंत्र जप की प्रामाणिक विधि सीखने, साधना संकल्प व गुरु आदेश प्राप्त करने हेतु ऐप से सीधे दीक्षा अर्जी लगाएं।</span>
+                </div>
+            </li>
+
+
+        <!-- कार्ड फुटर -->
+        <div class="card-footer-note">
+            <span>🔒 नाम, गोत्र व संकल्प पूर्णतः गोपनीय व सुरक्षित रहते हैं</span>
         </div>
-    </section>
+
+          </li>
+        </ul>
+
+
+    </div>
+</section>
 
     <!-- ===== FOOTER SECTION ===== -->
     <footer class="footer-container">
