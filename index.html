@@ -1013,6 +1013,157 @@
         </div>
     </section>
 
+  <!-- ================= 🔊 दरबार ऑडियो प्लेयर (START) ================= -->
+<div class="darbar-audio-wrapper">
+    <div class="audio-strip">
+        <button type="button" class="audio-btn" id="playBtn" onclick="toggleAudio()">
+            <span id="playIcon">▶</span>
+        </button>
+        <div class="audio-info">
+            <b>दरबार संदेश व अर्जी विधान</b>
+            <span id="audioStatus">सुनने के लिए प्ले करें (30 सेकंड)</span>
+        </div>
+        <div class="sound-wave" id="soundWave">
+            <span></span><span></span><span></span><span></span>
+        </div>
+    </div>
+    
+    <!-- आपकी ऑडियो फ़ाइल का लिंक (फ़ाइल को GitHub पर इसी नाम से अपलोड करें) -->
+    <audio id="darbarAudio" preload="none" src="darbar.mp3"></audio>
+</div>
+
+<style>
+.darbar-audio-wrapper {
+    width: 100%;
+    max-width: 460px;
+    margin: 15px auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.audio-strip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 112, 67, 0.08);
+    border: 1.5px solid rgba(255, 112, 67, 0.35);
+    border-radius: 40px;
+    padding: 8px 16px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.audio-btn {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff7043 0%, #d84315 100%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(255, 112, 67, 0.5);
+    outline: none;
+    transition: transform 0.15s ease;
+}
+
+.audio-btn:active {
+    transform: scale(0.92);
+}
+
+.audio-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.audio-info b {
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.audio-info span {
+    color: #ffb74d;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+/* साउंड वेव (ऑडियो बजने पर हिलने वाली बार) */
+.sound-wave {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    height: 18px;
+}
+
+.sound-wave span {
+    width: 3px;
+    height: 4px;
+    background: #ff7043;
+    border-radius: 2px;
+    opacity: 0.35;
+    transition: height 0.2s ease;
+}
+
+.sound-wave.playing span {
+    opacity: 1;
+    animation: barWave 1s ease-in-out infinite alternate;
+}
+
+.sound-wave.playing span:nth-child(1) { animation-delay: 0.1s; }
+.sound-wave.playing span:nth-child(2) { animation-delay: 0.3s; }
+.sound-wave.playing span:nth-child(3) { animation-delay: 0.5s; }
+.sound-wave.playing span:nth-child(4) { animation-delay: 0.2s; }
+
+@keyframes barWave {
+    0% { height: 4px; }
+    100% { height: 18px; }
+}
+</style>
+
+<script>
+function toggleAudio() {
+    const audio = document.getElementById('darbarAudio');
+    const icon = document.getElementById('playIcon');
+    const wave = document.getElementById('soundWave');
+    const statusText = document.getElementById('audioStatus');
+
+    if (audio.paused) {
+        audio.play().then(() => {
+            icon.innerText = "❚❚";
+            statusText.innerText = "ऑडियो संदेश चल रहा है...";
+            wave.classList.add('playing');
+        }).catch(err => {
+            console.log("प्ले नहीं हो सका:", err);
+            statusText.innerText = "ऑडियो लोड हो रहा है, पुनः दबाएं...";
+        });
+    } else {
+        audio.pause();
+        icon.innerText = "▶";
+        statusText.innerText = "रोक दिया गया (क्लिक कर फिर सुनें)";
+        wave.classList.remove('playing');
+    }
+}
+
+// ऑडियो खत्म होने पर बटन को वापस 'Play' में बदलना
+document.getElementById('darbarAudio').addEventListener('ended', function() {
+    document.getElementById('playIcon').innerText = "▶";
+    document.getElementById('audioStatus').innerText = "सुनने के लिए प्ले करें (30 सेकंड)";
+    document.getElementById('soundWave').classList.remove('playing');
+});
+</script>
+<!-- ================= 🔊 दरबार ऑडियो प्लेयर (END) ================= -->
+
+
     <!-- ===== SINGLE MASTER ARJI CARD ===== -->
 <section class="master-card-section">
     <div class="master-arji-card">
